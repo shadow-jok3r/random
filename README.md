@@ -75,22 +75,18 @@ basic setup
 Clone this repo and navigate inside it. Edit the "header.html" 
 and "footer.html" files with your own information, navigation, etc. 
 
-Be sure to edit the **RSS meta url** or else your feed won't validate!
+Be sure to edit the **domain** variable inside `barf` or else your feed won't validate!
 
 Then, clone and build my patched version of smu:
 
-
-$ git clone https://git.btxx.org/smu
-$ cd smu
-# OpenBSD users: change sudo to doas
-$ sudo make install
-
+    git clone https://git.btxx.org/smu
+    cd smu
+    # OpenBSD users: change sudo to doas
+    sudo make install
 
 Then clone this directory and build:
 
-
-$ make build
-
+    make build
 
 Your blog content will be in the `build` directory.
 

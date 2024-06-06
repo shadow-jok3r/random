@@ -22,8 +22,35 @@
 <p>You can learn more by reading the <a href="https://git.btxx.org/barf/about">official README</a> and view the generated <a href="/atom.xml">Atom feed here</a></p>
 <p><strong>barf</strong> = blogs are really fun</p>
 <hr />
+<h3>Get setup in 2 minutes</h3>
+<p><strong>Install dependencies:</strong></p>
+
+<ul>
+<li>For Linux: <code>rsync</code></li>
+<li>For macOS: <code>brew install coreutils gnu-sed</code></li>
+<li>For OpenBSD: <code>doas pkg_add rsync coreutils gsed cmake gcc</code></li>
+</ul>
+<p><strong>Clone and install the lightweight markdown parser, <code>smu</code></strong></p>
+
+<ul>
+<li><code>git clone https://git.btxx.org/smu</code></li>
+<li><code>cd smu ; make ; sudo make install</code></li>
+</ul>
+<p><strong>Clone <code>barf</code>:</strong> </p>
+
+<ul>
+<li><code>git clone https://git.btxx.org/barf</code></li>
+</ul>
+<ol>
+<li>Open project, change the <code>domain</code> variable at the top of the core barf file</li>
+<li>Run: <code>make build</code></li>
+<li>Upload the contents of <code>build</code> to your server! </li>
+<li>Profit?</li>
+</ol>
+<hr />
 <h3>Articles</h3>
 <ul>
+<li>2024-06-06 &middot; <a href="qol/">Quality of Life Improvements</a></li>
 <li>2023-10-09 &middot; <a href="cleanup/">Cleaning Up barf's Structure</a></li>
 <li>2023-08-12 &middot; <a href="openbsd/">Running `barf` on OpenBSD</a></li>
 <li>2023-03-07 &middot; <a href="dark-mode/">Supporting Basic Dark Mode</a></li>

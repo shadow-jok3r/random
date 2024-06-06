@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="data:,">
+	<title>Quality of Life Improvements</title>
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for blog posts" />
+	<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="RSS feed for blog posts" />
+	<style>*{box-sizing:border-box;}body{font-family:sans-serif;margin:0 auto;max-width:650px;padding:1rem;}img{max-width:100%;}pre{overflow:auto;}</style>
+</head>
+
+<nav>
+	<a href="#menu">Menu &darr;</a>
+</nav>
+
+<main>
+<h1>Quality of Life Improvements</h1>
+<p>2024-06-06</p>
+<p>I haven't circled back to <code>barf</code> in quite a bit of time, so I'm happy to announce a small update mainly focused on quality of life improvements! I'll keep things brief and get right into the core changes:</p>
+<p><strong>Automatic detection of your operating system (supports Linux, macOS and OpenBSD currently)</strong></p>
+<ul>
+<li><code>barf</code> now checks your current OS and sets aliases accordingly</li>
+<li>this removes the need to hard-set your own aliases or run syslinks</li>
+</ul>
+<p><strong>Added a semantically valid RSS feed</strong></p>
+<ul>
+<li><code>barf</code> initially launched with Atom support only, now a separate RSS feed is generated at build time</li>
+</ul>
+<p><strong>Removed hardcoded feed links from <code>header.html</code></strong></p>
+<ul>
+<li>You now only need to set your main domain at the top of the core <code>barf</code> file.</li>
+</ul>
+<p>That's it really! I've also updated the original blog posts about setting up <code>barf</code> on macOS and OpenBSD to reflect these changes.</p>
+<p>Cheers!</p>
+<footer role="contentinfo">
+    <hr>
+    <h3 id="menu">Menu Navigation</h3>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/websites">Websites</a></li>
+        <li><a href="https://git.btxx.org/barf">Source Code</a></li>
+    </ul>
+    <small>
+        Feeds: <a href="/atom.xml">Atom</a> | <a href="/rss.xml">RSS</a> <br>
+        Built with <a href="https://git.btxx.org/barf">barf</a>. <br>
+        The <a href="https://git.btxx.org/barf">code for this site</a> is MIT.
+    </small>
+</footer>
