@@ -1,5 +1,7 @@
 #!/bin/sh
 
+domain="https://barf.btxx.org"
+
 # Check the operating system
 os_name=$(uname -s)
 
@@ -48,7 +50,6 @@ index_html() {
 
 atom_xml() {
 	uri=$(sed -rn '/atom.xml/ s/.*href="([^"]*)".*/\1/ p' header.html)
-	domain=$(echo "$uri" | sed 's/atom.xml//g' | sed 's|/[^/]*$||')
 	first_commit_date=$(git log --pretty='format:%ai' . | cut -d ' ' -f1 | tail -1)
 
 	cat <<EOF
@@ -87,7 +88,6 @@ EOF
 
 rss_xml() {
 	uri=$(sed -rn '/rss.xml/ s/.*href="([^"]*)".*/\1/ p' header.html)
-	domain=$(echo "$uri" | sed 's/rss.xml//g' | sed 's|/[^/]*$||')
 	first_commit_date=$(git log --pretty='format:%ai' . | cut -d ' ' -f1 | tail -1)
 
 	cat <<EOF
@@ -112,7 +112,7 @@ EOF
 		cat <<EOF
 		<item>
 			<title>$title</title>
-			<description><![CDATA[$content]]></description>
+			<description>$content</description>
 			<link>$domain/$post_link</link>
 			<guid isPermaLink="false">$domain/$post_link</guid>
 			<pubDate>$published_date</pubDate>

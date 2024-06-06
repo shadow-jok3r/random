@@ -2,15 +2,15 @@
 <rss version="2.0">
 	<channel>
 		<title>barf</title>
-		<link>/rss.xml</link>
+		<link>https://barf.btxx.org/rss.xml</link>
 		<description>Feed description here</description>
-		<lastBuildDate>Thu, 06 Jun 2024 12:34:47 +0000</lastBuildDate>
-		<pubDate>Thu, 06 Jun 2024 12:34:47 +0000</pubDate>
+		<lastBuildDate>Thu, 06 Jun 2024 12:48:45 +0000</lastBuildDate>
+		<pubDate>Thu, 06 Jun 2024 12:48:45 +0000</pubDate>
 		<generator>Custom RSS Generator</generator>
 		<ttl>1800</ttl>
 		<item>
 			<title>Running `barf` on OpenBSD</title>
-			<description><![CDATA[&lt;h1&gt;Running &lt;code&gt;barf&lt;/code&gt; on OpenBSD&lt;/h1&gt;
+			<description>&lt;h1&gt;Running &lt;code&gt;barf&lt;/code&gt; on OpenBSD&lt;/h1&gt;
 &lt;p&gt;2023-08-12&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;barf&lt;/code&gt; project was built on Linux and was catered towards Linux users. The core of the project will remain focused on Linux/GNU tools, but I also need to support OpenBSD since that is my personal operating system of choice.&lt;/p&gt;
 &lt;h2&gt;Download Packages&lt;/h2&gt;
@@ -18,14 +18,14 @@
 &lt;pre&gt;&lt;code&gt;doas pkg_add rsync coreutils gsed cmake gcc
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then ensure that you alter all instances of &lt;code&gt;sed&lt;/code&gt; with &lt;code&gt;gsed&lt;/code&gt; in the core &lt;code&gt;barf&lt;/code&gt; file. (Or make an alias if you&#39;d prefer not to alter the main file)&lt;/p&gt;
-&lt;p&gt;After that, everything should work perfectly fine when building!&lt;/p&gt;]]></description>
-			<link>/openbsd</link>
-			<guid isPermaLink="false">/openbsd</guid>
+&lt;p&gt;After that, everything should work perfectly fine when building!&lt;/p&gt;</description>
+			<link>https://barf.btxx.org/openbsd</link>
+			<guid isPermaLink="false">https://barf.btxx.org/openbsd</guid>
 			<pubDate>Sat, 12 Aug 2023 00:00:00 +0000</pubDate>
 		</item>
 		<item>
 			<title>Markdown Examples in barf</title>
-			<description><![CDATA[&lt;h1&gt;Markdown Examples in barf&lt;/h1&gt;
+			<description>&lt;h1&gt;Markdown Examples in barf&lt;/h1&gt;
 &lt;p&gt;2023-01-05&lt;/p&gt;
 &lt;p&gt;This following was lifted from &lt;a href=&quot;https://github.com/karlb/smu&quot;&gt;https://github.com/karlb/smu&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;&lt;code&gt;smu&lt;/code&gt; Syntax&lt;/h1&gt;
@@ -257,14 +257,14 @@ one.
 passed through to the resulting document without modification. This is a good
 way to work around features that are missing in smu. If you don&#39;t want this
 behaviour, use the &lt;code&gt;-n&lt;/code&gt; flag when executing smu to stricly escape the HTML
-tags.&lt;/p&gt;]]></description>
-			<link>/markdown-examples</link>
-			<guid isPermaLink="false">/markdown-examples</guid>
+tags.&lt;/p&gt;</description>
+			<link>https://barf.btxx.org/markdown-examples</link>
+			<guid isPermaLink="false">https://barf.btxx.org/markdown-examples</guid>
 			<pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
 		</item>
 		<item>
 			<title>Running `barf` on MacOS</title>
-			<description><![CDATA[&lt;h1&gt;Running &lt;code&gt;barf&lt;/code&gt; on MacOS&lt;/h1&gt;
+			<description>&lt;h1&gt;Running &lt;code&gt;barf&lt;/code&gt; on MacOS&lt;/h1&gt;
 &lt;p&gt;2023-01-18&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;barf&lt;/code&gt; project was built on Linux and was catered towards Linux users. The core of the project will remain focused on Linux/GNU tools, but that doesn&#39;t mean MacOS needs to be left out in the cold.&lt;/p&gt;
 &lt;p&gt;There are some very minor changes you&#39;ll need to make to your default &lt;code&gt;sed&lt;/code&gt; and &lt;code&gt;date&lt;/code&gt; paths if you plan to run barf on MacOS.&lt;/p&gt;
@@ -282,14 +282,14 @@ sudo ln -fs /opt/homebrew/bin/gdate /usr/local/bin/date
 &lt;p&gt;and add the following to your &lt;code&gt;.bash_profile&lt;/code&gt; file:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;export PATH=&amp;quot;/usr/local/bin:$PATH&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Reload your &lt;code&gt;bash&lt;/code&gt; instance and everything should work as intended!&lt;/p&gt;]]></description>
-			<link>/macos</link>
-			<guid isPermaLink="false">/macos</guid>
+&lt;p&gt;Reload your &lt;code&gt;bash&lt;/code&gt; instance and everything should work as intended!&lt;/p&gt;</description>
+			<link>https://barf.btxx.org/macos</link>
+			<guid isPermaLink="false">https://barf.btxx.org/macos</guid>
 			<pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
 		</item>
 		<item>
 			<title>Supporting Basic Dark Mode</title>
-			<description><![CDATA[&lt;h1&gt;Supporting Basic Dark Mode&lt;/h1&gt;
+			<description>&lt;h1&gt;Supporting Basic Dark Mode&lt;/h1&gt;
 &lt;p&gt;2023-03-07&lt;/p&gt;
 &lt;p&gt;The default &lt;code&gt;barf&lt;/code&gt; site generator now supports basic dark mode functionality. This has been achieved by including the standard &lt;code&gt;color-scheme&lt;/code&gt; meta tag in the core &lt;code&gt;header.html&lt;/code&gt; file:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;color-scheme&amp;quot; content=&amp;quot;dark light&amp;quot;&amp;gt;
@@ -299,14 +299,14 @@ sudo ln -fs /opt/homebrew/bin/gdate /usr/local/bin/date
 &lt;/blockquote&gt;
 &lt;h2&gt;Minor Caveat&lt;/h2&gt;
 &lt;p&gt;Unfortunately, Safari still has minor &lt;code&gt;ahref&lt;/code&gt; / link color issue when defaulting to browser dark mode. If this is a problem for your own build of &lt;code&gt;barf&lt;/code&gt;, take a look at a &lt;a href=&quot;https://bt.ht/safari-default-dark-mode/&quot;&gt;solution I wrote about here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Personally, I can&#39;t be bothered to add that extra code to this project. The Safari team needs to get their shit together and fix such a simple bug. Plus, you shouldn&#39;t be using Safari anyway - it&#39;s proprietary garbage.&lt;/p&gt;]]></description>
-			<link>/dark-mode</link>
-			<guid isPermaLink="false">/dark-mode</guid>
+&lt;p&gt;Personally, I can&#39;t be bothered to add that extra code to this project. The Safari team needs to get their shit together and fix such a simple bug. Plus, you shouldn&#39;t be using Safari anyway - it&#39;s proprietary garbage.&lt;/p&gt;</description>
+			<link>https://barf.btxx.org/dark-mode</link>
+			<guid isPermaLink="false">https://barf.btxx.org/dark-mode</guid>
 			<pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
 		</item>
 		<item>
 			<title>Cleaning Up barf's Structure</title>
-			<description><![CDATA[&lt;h1&gt;Cleaning Up barf&#39;s Structure&lt;/h1&gt;
+			<description>&lt;h1&gt;Cleaning Up barf&#39;s Structure&lt;/h1&gt;
 &lt;p&gt;2023-10-09&lt;/p&gt;
 &lt;p&gt;Things probably look a little different around here. Both in terms of this demo site &lt;em&gt;and&lt;/em&gt; the core &lt;code&gt;barf&lt;/code&gt; files itself.&lt;/p&gt;
 &lt;p&gt;This project was always intended to be focused on Linux platforms. So, I&#39;ve removed the included &lt;code&gt;barf_macos&lt;/code&gt; and &lt;code&gt;barf_openbsd&lt;/code&gt; files to keep the generator more streamlined. But have no fear! Instructions for both Mac and OpenBSD can still be found on the main blog:&lt;/p&gt;
@@ -323,9 +323,9 @@ pre{overflow:auto;}
 &lt;p&gt;Users still have the ability to tweak things as much as they&#39;d like, but the standard look should be more than enough for anyone just focusing on writing. Dark mode has also been dropped but is easily added by adding the following inside the &lt;code&gt;head&lt;/code&gt; tags:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;color-scheme&amp;quot; content=&amp;quot;dark light&amp;quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Hopefully these changes reduce the overall scope of the project, which was a main point made on the README originally!&lt;/p&gt;]]></description>
-			<link>/cleanup</link>
-			<guid isPermaLink="false">/cleanup</guid>
+&lt;p&gt;Hopefully these changes reduce the overall scope of the project, which was a main point made on the README originally!&lt;/p&gt;</description>
+			<link>https://barf.btxx.org/cleanup</link>
+			<guid isPermaLink="false">https://barf.btxx.org/cleanup</guid>
 			<pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
 		</item>
 </channel>
