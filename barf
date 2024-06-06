@@ -1,4 +1,15 @@
 #!/bin/sh
+
+# Check the operating system
+os_name=$(uname -s)
+
+if [ "$os_name" = "OpenBSD" ]; then
+    alias sed=gsed
+elif [ "$os_name" = "Darwin" ]; then
+    alias sed=gsed
+    alias date=gdate
+fi
+
 set -eu
 MARKDOWN=smu
 IFS='	'
@@ -74,6 +85,45 @@ EOF
 	echo '</feed>'
 }
 
+rss_xml() {
+	uri=$(sed -rn '/rss.xml/ s/.*href="([^"]*)".*/\1/ p' header.html)
+	domain=$(echo "$uri" | sed 's/rss.xml//g' | sed 's|/[^/]*$||')
+	first_commit_date=$(git log --pretty='format:%ai' . | cut -d ' ' -f1 | tail -1)
+
+	cat <<EOF
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+	<channel>
+		<title>$(sed -n '/^# /{s/# //p; q}' index.md)</title>
+		<link>$domain/rss.xml</link>
+		<description>Feed description here</description>
+		<lastBuildDate>$(date -u +"%a, %d %b %Y %H:%M:%S %z")</lastBuildDate>
+		<pubDate>$(date -u +"%a, %d %b %Y %H:%M:%S %z")</pubDate>
+		<generator>Custom RSS Generator</generator>
+		<ttl>1800</ttl>
+EOF
+
+	while read -r f title created; do
+		content=$($MARKDOWN "$f" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g')
+		post_link=$(echo "$f" | sed -E 's|posts/(.*).md|\1|')
+		basic_date=$(echo $(head -3 "$f" | tail -1))
+		published_date=$(date -d "$basic_date" -u +"%a, %d %b %Y %H:%M:%S %z")
+
+		cat <<EOF
+		<item>
+			<title>$title</title>
+			<description><![CDATA[$content]]></description>
+			<link>$domain/$post_link</link>
+			<guid isPermaLink="false">$domain/$post_link</guid>
+			<pubDate>$published_date</pubDate>
+		</item>
+EOF
+	done < "$1"
+
+	echo '</channel>'
+	echo '</rss>'
+}
+
 write_page() {
 	filename=$1
 	directory=$(echo $(basename "$filename" .md))
@@ -94,6 +144,7 @@ rm -rf build && mkdir build
 index_tsv posts | sort -rt "	" -k 3 > build/posts.tsv
 index_html build/posts.tsv > build/index.html
 atom_xml build/posts.tsv > build/atom.xml
+rss_xml build/posts.tsv > build/rss.xml
 while read -r f title created; do
 	write_page "$f" "$title" "$created"
 done < build/posts.tsv
