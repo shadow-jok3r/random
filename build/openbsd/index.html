@@ -7,7 +7,7 @@
 	<title>Running `barf` on OpenBSD</title>
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for blog posts" />
 	<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="RSS feed for blog posts" />
-	<style>*{box-sizing:border-box;}body{font-family:sans-serif;margin:0 auto;max-width:650px;padding:1rem;}img{max-width:100%;}pre{overflow:auto;}</style>
+	<style>*{box-sizing:border-box;}body{font-family:sans-serif;line-height:1.33;margin:0 auto;max-width:650px;padding:1rem;}img{max-width:100%;}pre{border:1px solid;overflow:auto;padding:5px;}.footnotes{font-size:90%;}</style>
 </head>
 
 <nav>
@@ -15,10 +15,10 @@
 </nav>
 
 <main>
-<h1>Running <code>barf</code> on OpenBSD</h1>
+<h1 id="running-on-openbsd">Running <code>barf</code> on OpenBSD</h1>
 <p>2023-08-12</p>
-<p>The <code>barf</code> project was built on Linux and was catered towards Linux users. The core of the project will remain focused on Linux/GNU tools, but I also need to support OpenBSD since that is my personal operating system of choice.</p>
-<h2>Download Packages</h2>
+<p>The <code>barf</code> project was built on Linux and was catered towards Linux users. The core of the project will remain focused on Linux&#47;GNU tools, but I also need to support OpenBSD since that is my personal operating system of choice.</p>
+<h2 id="download-packages">Download Packages</h2>
 <p>Along with your Markdown parser of choice (<code>barf</code> assumes you will be using my version of <a href="https://git.sr.ht/~bt/smu">smu</a>) you will also need to install the required packages on your OpenBSD system:</p>
 <pre><code>doas pkg_add rsync coreutils gsed cmake gcc
 </code></pre>

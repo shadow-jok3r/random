@@ -7,7 +7,7 @@
 	<title>barf</title>
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for blog posts" />
 	<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="RSS feed for blog posts" />
-	<style>*{box-sizing:border-box;}body{font-family:sans-serif;margin:0 auto;max-width:650px;padding:1rem;}img{max-width:100%;}pre{overflow:auto;}</style>
+	<style>*{box-sizing:border-box;}body{font-family:sans-serif;line-height:1.33;margin:0 auto;max-width:650px;padding:1rem;}img{max-width:100%;}pre{border:1px solid;overflow:auto;padding:5px;}.footnotes{font-size:90%;}</style>
 </head>
 
 <nav>
@@ -15,40 +15,35 @@
 </nav>
 
 <main>
-<h1>barf</h1>
+<h1 id="barf">barf</h1>
 <p><strong>barf is an extremely minimal blog generator.</strong></p>
-<p>The entire build script is less than 100 lines of shell.</p>
-<p>It could almost be called "suckless", but probably isn't. It was created for those focused on writing, not tinkering.</p>
-<p>You can learn more by reading the <a href="https://git.btxx.org/barf/about">official README</a> and view the generated <a href="/atom.xml">Atom feed here</a></p>
+<p>The entire build script is &#62;170 lines of shell.</p>
+<p>It could almost be called &#8220;suckless&#8221;, but probably isn&#8217;t. It was created for those focused on writing, not tinkering.</p>
+<p>You can learn more by reading the <a href="https://git.btxx.org/barf/about">official README</a>.</p>
 <p><strong>barf</strong> = blogs are really fun</p>
-<hr />
-<h3>Get setup in 2 minutes</h3>
+<hr/>
+<h3 id="get-setup-in-2-minutes">Get setup in 2 minutes</h3>
 <p><strong>Install dependencies:</strong></p>
-
-<ul>
-<li>For Linux: <code>rsync</code></li>
-<li>For macOS: <code>brew install coreutils gnu-sed</code></li>
-<li>For OpenBSD: <code>doas pkg_add rsync coreutils gsed cmake gcc</code></li>
-</ul>
-<p><strong>Clone and install the lightweight markdown parser, <code>smu</code></strong></p>
-
-<ul>
-<li><code>git clone https://git.btxx.org/smu</code></li>
-<li><code>cd smu ; make ; sudo make install</code></li>
-</ul>
-<p><strong>Clone <code>barf</code>:</strong> </p>
-
-<ul>
-<li><code>git clone https://git.btxx.org/barf</code></li>
-</ul>
+<p>For Linux (Alpine example):</p>
+<pre><code>sudo apk add rsync lowdown
+</code></pre>
+<p>For macOS:</p>
+<pre><code>brew install rsync lowdown coreutils gnu-sed
+</code></pre>
+<p>For OpenBSD:</p>
+<pre><code>doas pkg_add rsync lowdown coreutils gsed cmake gcc
+</code></pre>
+<p><strong>Clone barf:</strong> </p>
+<pre><code>git clone https:&#47;&#47;git.btxx.org&#47;barf
+</code></pre>
 <ol>
 <li>Open project, change the <code>domain</code> variable at the top of the core barf file</li>
 <li>Run: <code>make build</code></li>
 <li>Upload the contents of <code>build</code> to your server! </li>
 <li>Profit?</li>
 </ol>
-<hr />
-<h3>Articles</h3>
+<hr/>
+<h3 id="articles">Articles</h3>
 <ul>
 <li>2024-06-06 &middot; <a href="qol/">Quality of Life Improvements</a></li>
 <li>2023-10-09 &middot; <a href="cleanup/">Cleaning Up barf's Structure</a></li>

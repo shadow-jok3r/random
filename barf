@@ -14,7 +14,7 @@ elif [ "$os_name" = "Darwin" ]; then
 fi
 
 set -eu
-MARKDOWN=smu
+MARKDOWN=lowdown
 IFS='	'
 
 # Create tab separated file with filename, title, creation date, last update

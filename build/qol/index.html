@@ -7,7 +7,7 @@
 	<title>Quality of Life Improvements</title>
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for blog posts" />
 	<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="RSS feed for blog posts" />
-	<style>*{box-sizing:border-box;}body{font-family:sans-serif;margin:0 auto;max-width:650px;padding:1rem;}img{max-width:100%;}pre{overflow:auto;}</style>
+	<style>*{box-sizing:border-box;}body{font-family:sans-serif;line-height:1.33;margin:0 auto;max-width:650px;padding:1rem;}img{max-width:100%;}pre{border:1px solid;overflow:auto;padding:5px;}.footnotes{font-size:90%;}</style>
 </head>
 
 <nav>
@@ -15,9 +15,9 @@
 </nav>
 
 <main>
-<h1>Quality of Life Improvements</h1>
+<h1 id="quality-of-life-improvements">Quality of Life Improvements</h1>
 <p>2024-06-06</p>
-<p>I haven't circled back to <code>barf</code> in quite a bit of time, so I'm happy to announce a small update mainly focused on quality of life improvements! I'll keep things brief and get right into the core changes:</p>
+<p>I haven&#8217;t circled back to <code>barf</code> in quite a bit of time, so I&#8217;m happy to announce a small update mainly focused on quality of life improvements! I&#8217;ll keep things brief and get right into the core changes:</p>
 <p><strong>Automatic detection of your operating system (supports Linux, macOS and OpenBSD currently)</strong></p>
 <ul>
 <li><code>barf</code> now checks your current OS and sets aliases accordingly</li>
@@ -31,7 +31,11 @@
 <ul>
 <li>You now only need to set your main domain at the top of the core <code>barf</code> file.</li>
 </ul>
-<p>That's it really! I've also updated the original blog posts about setting up <code>barf</code> on macOS and OpenBSD to reflect these changes.</p>
+<p><strong>Swapped out <code>smu</code> for <code>lowdown</code></strong></p>
+<ul>
+<li>The default Markdown parser is now set to <code>lowdown</code>. The original parser (<code>smu</code>) is great, but I wanted to make the project simpler by avoiding users to clone and build a separate package.</li>
+</ul>
+<p>That&#8217;s it really! I&#8217;ve also updated the original blog posts about setting up <code>barf</code> on macOS and OpenBSD to reflect these changes.</p>
 <p>Cheers!</p>
 <footer role="contentinfo">
     <hr>

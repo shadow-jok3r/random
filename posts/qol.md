@@ -17,6 +17,10 @@ I haven't circled back to `barf` in quite a bit of time, so I'm happy to announc
 
 * You now only need to set your main domain at the top of the core `barf` file.
 
+**Swapped out `smu` for `lowdown`**
+
+* The default Markdown parser is now set to `lowdown`. The original parser (`smu`) is great, but I wanted to make the project simpler by avoiding users to clone and build a separate package.
+
 That's it really! I've also updated the original blog posts about setting up `barf` on macOS and OpenBSD to reflect these changes.
 
 Cheers!

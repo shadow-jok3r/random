@@ -216,6 +216,11 @@ the table body.
 	| :------- | :------: | -------: |
 	| Left     | Center   | Right    |
 
+Footnotes
+---------
+
+Here is an example of using Markdown footnotes[^1]. And incase you were looking for more examples, here is another one[^2].
+
 Other interesting stuff
 -----------------------
 
@@ -252,3 +257,6 @@ passed through to the resulting document without modification. This is a good
 way to work around features that are missing in smu. If you don't want this
 behaviour, use the `-n` flag when executing smu to stricly escape the HTML
 tags.
+
+[^1]: This is the first footnote
+[^2]: Just like I promised - another footnote example

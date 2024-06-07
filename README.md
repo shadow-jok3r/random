@@ -3,12 +3,11 @@ barf
 
 barf is an extremely minimal blog generator.
 
-The entire build script is less than 100 lines of shell.
+The entire build script is >170 lines of shell.
 
 It could *almost* be called "suckless", but probably isn't.
 
-(barf is a modified/forked version of Karl Bartel's fantastic blog.sh 
-(https://github.com/karlb/karl.berlin). Be sure to check it out since 
+(barf is a modified/forked version of Karl Bartel's fantastic [blog.sh](https://github.com/karlb/karl.berlin). Be sure to check it out since 
 my version does things slightly different.)
 
 You can see a [live demo here](https://barf.btxx.org)
@@ -39,9 +38,13 @@ linux
 -----
 
 - rsync
-- smu (see below)
+- lowdown
 - entr (optonal)
 - standard UNIX tools
+
+Example on Alpine:
+
+    sudo apk add rsync lowdown
 
 openbsd
 -------
@@ -53,9 +56,11 @@ https://barf.btxx.org/openbsd
 - gcc
 - cmake
 - rsync
+- lowdown
 - gsed
-- smu (see below)
 - entr (optional)
+
+    doas pkg_add coreutils gcc cmake rsync lowdown gsed
 
 macOS
 -----
@@ -66,8 +71,10 @@ https://barf.btxx.org/macos
 - coreutils
 - gnu-sed
 - rsync
-- smu (see below)
+- lowdown
 - entr (optional)
+
+    brew install coreutils gnu-sed rsync lowdown
 
 basic setup
 -----------
@@ -77,14 +84,7 @@ and "footer.html" files with your own information, navigation, etc.
 
 Be sure to edit the **domain** variable inside `barf` or else your feed won't validate!
 
-Then, clone and build my patched version of smu:
-
-    git clone https://git.btxx.org/smu
-    cd smu
-    # OpenBSD users: change sudo to doas
-    sudo make install
-
-Then clone this directory and build:
+Then build:
 
     make build
 
@@ -155,11 +155,11 @@ or even speed things up are more than welcome!
 
 ## Can I use other Markdown parsers?
 
-Of course! Simply edit the main `barf` script and swap out `smu` with 
+Of course! Simply edit the main `barf` script and swap out `lowdown` with 
 something else. I wouldn't advise doing this if you already have pre-existing 
-content based-off `smu`, since this could break some of your pages.
+content based-off `lowdown`, since this could break some of your pages.
 
-But give smu (https://git.btxx.org/smu) a try - it is very lightweight and fast!
+But give `lowdown` a try - it is very lightweight and fast!
 
 
 MORE FAQs TO COME...
