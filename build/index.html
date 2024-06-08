@@ -16,33 +16,52 @@
 
 <main>
 <h1 id="barf">barf</h1>
+
 <p><strong>barf is an extremely minimal blog generator.</strong></p>
+
 <p>The entire build script is &#62;170 lines of shell.</p>
+
 <p>It could almost be called &#8220;suckless&#8221;, but probably isn&#8217;t. It was created for those focused on writing, not tinkering.</p>
+
 <p>You can learn more by reading the <a href="https://git.btxx.org/barf/about">official README</a>.</p>
+
 <p><strong>barf</strong> = blogs are really fun</p>
+
 <hr/>
+
 <h3 id="get-setup-in-2-minutes">Get setup in 2 minutes</h3>
+
 <p><strong>Install dependencies:</strong></p>
+
 <p>For Linux (Alpine example):</p>
+
 <pre><code>sudo apk add rsync lowdown
 </code></pre>
+
 <p>For macOS:</p>
+
 <pre><code>brew install rsync lowdown coreutils gnu-sed
 </code></pre>
+
 <p>For OpenBSD:</p>
-<pre><code>doas pkg_add rsync lowdown coreutils gsed cmake gcc
+
+<pre><code>doas pkg_add lowdown coreutils gsed cmake gcc
 </code></pre>
+
 <p><strong>Clone barf:</strong> </p>
+
 <pre><code>git clone https:&#47;&#47;git.btxx.org&#47;barf
 </code></pre>
+
 <ol>
 <li>Open project, change the <code>domain</code> variable at the top of the core barf file</li>
 <li>Run: <code>make build</code></li>
 <li>Upload the contents of <code>build</code> to your server! </li>
 <li>Profit?</li>
 </ol>
+
 <hr/>
+
 <h3 id="articles">Articles</h3>
 <ul>
 <li>2024-06-06 &middot; <a href="qol/">Quality of Life Improvements</a></li>

@@ -26,7 +26,7 @@ For macOS:
 
 For OpenBSD:
 
-    doas pkg_add rsync lowdown coreutils gsed cmake gcc
+    doas pkg_add lowdown coreutils gsed cmake gcc
 
 **Clone barf:** 
 

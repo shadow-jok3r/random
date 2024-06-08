@@ -2,34 +2,46 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>barf</title>
 	<link href="https://barf.btxx.org/atom.xml" rel="self" />
-	<updated>2024-06-07T10:26:51Z</updated>
+	<updated>2024-06-08T11:53:53Z</updated>
 	<author>
-		<name>Bradley Taunt</name>
+		<name></name>
 	</author>
 	<id>https://barf.btxx.org,2024-01-19:default-atom-feed/</id>
 	<entry>
 		<title>Quality of Life Improvements</title>
 		<content type="html">&lt;h1 id=&quot;quality-of-life-improvements&quot;&gt;Quality of Life Improvements&lt;/h1&gt;
+
 &lt;p&gt;2024-06-06&lt;/p&gt;
+
 &lt;p&gt;I haven&amp;#8217;t circled back to &lt;code&gt;barf&lt;/code&gt; in quite a bit of time, so I&amp;#8217;m happy to announce a small update mainly focused on quality of life improvements! I&amp;#8217;ll keep things brief and get right into the core changes:&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;Automatic detection of your operating system (supports Linux, macOS and OpenBSD currently)&lt;/strong&gt;&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;barf&lt;/code&gt; now checks your current OS and sets aliases accordingly&lt;/li&gt;
 &lt;li&gt;this removes the need to hard-set your own aliases or run syslinks&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;p&gt;&lt;strong&gt;Added a semantically valid RSS feed&lt;/strong&gt;&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;barf&lt;/code&gt; initially launched with Atom support only, now a separate RSS feed is generated at build time&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;p&gt;&lt;strong&gt;Removed hardcoded feed links from &lt;code&gt;header.html&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;You now only need to set your main domain at the top of the core &lt;code&gt;barf&lt;/code&gt; file.&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;p&gt;&lt;strong&gt;Swapped out &lt;code&gt;smu&lt;/code&gt; for &lt;code&gt;lowdown&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;The default Markdown parser is now set to &lt;code&gt;lowdown&lt;/code&gt;. The original parser (&lt;code&gt;smu&lt;/code&gt;) is great, but I wanted to make the project simpler by avoiding users to clone and build a separate package.&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;p&gt;That&amp;#8217;s it really! I&amp;#8217;ve also updated the original blog posts about setting up &lt;code&gt;barf&lt;/code&gt; on macOS and OpenBSD to reflect these changes.&lt;/p&gt;
+
 &lt;p&gt;Cheers!&lt;/p&gt;</content>
 		<link href="https://barf.btxx.org/qol"/>
 		<id>https://barf.btxx.org/qol</id>
@@ -39,12 +51,18 @@
 	<entry>
 		<title>Running `barf` on OpenBSD</title>
 		<content type="html">&lt;h1 id=&quot;running-on-openbsd&quot;&gt;Running &lt;code&gt;barf&lt;/code&gt; on OpenBSD&lt;/h1&gt;
+
 &lt;p&gt;2023-08-12&lt;/p&gt;
+
 &lt;p&gt;The &lt;code&gt;barf&lt;/code&gt; project was built on Linux and was catered towards Linux users. The core of the project will remain focused on Linux&amp;#47;GNU tools, but I also need to support OpenBSD since that is my personal operating system of choice.&lt;/p&gt;
+
 &lt;h2 id=&quot;download-packages&quot;&gt;Download Packages&lt;/h2&gt;
+
 &lt;p&gt;Along with your Markdown parser of choice (&lt;code&gt;barf&lt;/code&gt; assumes you will be using my version of &lt;a href=&quot;https://git.sr.ht/~bt/smu&quot;&gt;smu&lt;/a&gt;) you will also need to install the required packages on your OpenBSD system:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;doas pkg_add rsync coreutils gsed cmake gcc
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;After that, everything should work perfectly fine when building!&lt;/p&gt;</content>
 		<link href="https://barf.btxx.org/openbsd"/>
 		<id>https://barf.btxx.org/openbsd</id>
@@ -54,12 +72,17 @@
 	<entry>
 		<title>Markdown Examples in barf</title>
 		<content type="html">&lt;h1 id=&quot;markdown-examples-in-barf&quot;&gt;Markdown Examples in barf&lt;/h1&gt;
+
 &lt;p&gt;2023-01-05&lt;/p&gt;
+
 &lt;p&gt;This following was lifted from &lt;a href=&quot;https://github.com/karlb/smu&quot;&gt;https:&amp;#47;&amp;#47;github.com&amp;#47;karlb&amp;#47;smu&lt;/a&gt;&lt;/p&gt;
+
 &lt;h1 id=&quot;syntax&quot;&gt;&lt;code&gt;smu&lt;/code&gt; Syntax&lt;/h1&gt;
+
 &lt;p&gt;smu was started as a rewrite of
 &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;markdown&lt;/a&gt; but became something
 more lightweight and consistent. It differs from &lt;a href=&quot;https://commonmark.org/&quot;&gt;CommonMark&lt;/a&gt; in the following ways:&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;No support for &lt;em&gt;reference style links&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Stricter indentation rules for lists&lt;/li&gt;
@@ -67,13 +90,17 @@ more lightweight and consistent. It differs from &lt;a href=&quot;https://common
 &lt;li&gt;Horizontal rules (&lt;code&gt;&amp;#60;hr&amp;#62;&lt;/code&gt;) must use &lt;code&gt;- - -&lt;/code&gt; as syntax&lt;/li&gt;
 &lt;li&gt;Code fences have stricter syntax&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;p&gt;Patches that increase the CommonMark compatibility are welcome as long as they don&amp;#8217;t increase the code complexity significantly.&lt;/p&gt;
+
 &lt;p&gt;This project is a fork of the &lt;a href=&quot;https://github.com/gottox/smu&quot;&gt;original smu&lt;/a&gt; by
 &lt;a href=&quot;https://eboland.de&quot;&gt;Enno Boland (gottox)&lt;/a&gt;. The main differences to the
 original smu are:&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Support for code fences&lt;/li&gt;
 &lt;li&gt;Improved &lt;a href=&quot;https://commonmark.org/&quot;&gt;CommonMark&lt;/a&gt; compatibility. E.g.
+
 &lt;ul&gt;
 &lt;li&gt;Code blocks need four spaces indentation instead of three&lt;/li&gt;
 &lt;li&gt;Skip empty lines at end of code blocks&lt;/li&gt;
@@ -87,10 +114,14 @@ original smu are:&lt;/p&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Added a simple test suite to check for compliance and avoid regressions&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h2 id=&quot;inline-patterns&quot;&gt;Inline patterns&lt;/h2&gt;
+
 &lt;p&gt;There are several patterns you can use to highlight your text:&lt;/p&gt;
+
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Emphasis
+&lt;li&gt;&lt;p&gt;Emphasis&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Surround your text with &lt;code&gt;*&lt;/code&gt; or &lt;code&gt;_&lt;/code&gt; to get &lt;em&gt;emphasised&lt;/em&gt; text:
 This &lt;em&gt;is&lt;/em&gt; cool.
@@ -106,29 +137,39 @@ This &lt;strong&gt;&lt;em&gt;is&lt;/em&gt;&lt;/strong&gt; cool, too.&lt;/li&gt;
 This is a wontfix bug because it would make the source too complex.
 Use this instead:
 &lt;strong&gt;&lt;em&gt;Hello&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;you&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;inline Code&lt;/p&gt;
+
 &lt;p&gt;You can produce inline code by surrounding it with backticks.&lt;/p&gt;
+
 &lt;p&gt;Use &lt;code&gt;rm -rf &amp;#47;&lt;/code&gt; if you&amp;#8217;re a N00b.
 Use &lt;code&gt;rm -rf &amp;#47;&lt;/code&gt; if you&amp;#8217;re a N00b.
 Use &lt;code&gt;rm -rf &amp;#47;&lt;/code&gt; if you&amp;#8217;re a N00b.&lt;/p&gt;
+
 &lt;p&gt;Double and triple backticks can be used if the code itself contains backticks.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h2 id=&quot;titles&quot;&gt;Titles&lt;/h2&gt;
+
 &lt;p&gt;Creating titles in smu is very easy. There are two different syntax styles. The
 first is underlining with at least three characters:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;Heading
 =======
 
 Topic
 -----
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;This is very intuitive and self explaining. The resulting sourcecode looks like
 this:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;&amp;#60;h1&amp;#62;Heading&amp;#60;&amp;#47;h1&amp;#62;
 &amp;#60;h2&amp;#62;Topic&amp;#60;&amp;#47;h2&amp;#62;
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Use the following prefixes if you don&amp;#8217;t like underlining:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;# h1
 ## h2
 ### h3
@@ -136,127 +177,179 @@ this:&lt;/p&gt;
 ##### h5
 ###### h6
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
+
 &lt;p&gt;The simplest way to define a link is with simple &lt;code&gt;&amp;#60;&amp;#62;&lt;/code&gt;.&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;&amp;#60;http:&amp;#47;&amp;#47;s01.de&amp;#62;
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;You can do the same for E-Mail addresses:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;&amp;#60;yourname@s01.de&amp;#62;
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;If you want to define a label for the url, you have to use a different syntax&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;[smu - simple mark up](http:&amp;#47;&amp;#47;s01.de&amp;#47;~gottox&amp;#47;index.cgi&amp;#47;proj_smu)
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;The resulting HTML-Code&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;&amp;#60;a href=&quot;http:&amp;#47;&amp;#47;s01.de&amp;#47;~gottox&amp;#47;index.cgi&amp;#47;proj_smu&quot;&amp;#62;smu - simple mark up&amp;#60;&amp;#47;a&amp;#62;&amp;#60;&amp;#47;p&amp;#62;
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&quot;lists&quot;&gt;Lists&lt;/h2&gt;
+
 &lt;p&gt;Defining lists is very straightforward:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;* Item 1
 * Item 2
 * Item 3
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Result:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;&amp;#60;ul&amp;#62;
 &amp;#60;li&amp;#62;Item 1&amp;#60;&amp;#47;li&amp;#62;
 &amp;#60;li&amp;#62;Item 2&amp;#60;&amp;#47;li&amp;#62;
 &amp;#60;li&amp;#62;Item 3&amp;#60;&amp;#47;li&amp;#62;
 &amp;#60;&amp;#47;ul&amp;#62;
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Defining ordered lists is also very easy:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;1. Item 1
 2. Item 2
 3. Item 3
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Only the first number in a list is meaningful. All following list items are
 continously counted. If you want a list starting at 2, you could write:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;2. Item 1
 2. Item 2
 2. Item 3
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;and get the following HTML which will render with the numbers 2, 3, 4:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;&amp;#60;ol start=&quot;2&quot;&amp;#62;
 &amp;#60;li&amp;#62;Item 1&amp;#60;&amp;#47;li&amp;#62;
 &amp;#60;li&amp;#62;Item 2&amp;#60;&amp;#47;li&amp;#62;
 &amp;#60;li&amp;#62;Item 3&amp;#60;&amp;#47;li&amp;#62;
 &amp;#60;&amp;#47;ol&amp;#62;
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&quot;code-blockquote&quot;&gt;Code &amp;#38; Blockquote&lt;/h2&gt;
+
 &lt;p&gt;Use the &lt;code&gt;&amp;#62;&lt;/code&gt; as a line prefix for defining blockquotes. Blockquotes are
 interpreted as well. This makes it possible to embed links, headings and even
 other quotes into a quote:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;&amp;#62; Hello
 &amp;#62; This is a quote with a [link](http:&amp;#47;&amp;#47;s01.de&amp;#47;~gottox)
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Result:
     
     Hello
     This is a quote with a link
     &lt;/p&gt;
+
 &lt;p&gt;You can define a code block with a leading Tab or with &lt;strong&gt;4&lt;/strong&gt; leading spaces&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;    this.is(code)
 
     this.is(code, too)
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Result:
     this.is(code)
     this.is(code, too)
     &lt;/p&gt;
+
 &lt;p&gt;Please note that you can&amp;#8217;t use HTML or smu syntax in a code block.&lt;/p&gt;
+
 &lt;p&gt;Another way to write code blocks is to use code fences:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;```json
 {&quot;some&quot;: &quot;code&quot;}
 ```
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;This has two advantages:
 * The optional language identifier will be turned into a &lt;code&gt;language-&lt;/code&gt; class name
 * You can keep the original indentation which helps when doing copy &amp;#38; paste&lt;/p&gt;
+
 &lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
+
 &lt;p&gt;Tables can be generated with the following syntax:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;| Heading1 | Heading2 |
 | -------- | -------- |
 | Cell 1   | Cell2    |
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Aligning the columns make the input nicer to read, but is not necessary to get
 correct table output. You could just write&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;| Heading1 | Heading2 |
 | --- | --- |
 | Cell 1 | Cell2 |
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;To align the content of table cells, use &lt;code&gt;|:--|&lt;/code&gt; for left, &lt;code&gt;|--:|&lt;/code&gt; for right
 and &lt;code&gt;|:--:|&lt;/code&gt; for centered alignment in the row which separates the header from
 the table body.&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;| Heading1 | Heading2 | Heading3 |
 | :------- | :------: | -------: |
 | Left     | Center   | Right    |
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+
 &lt;p&gt;Here is an example of using Markdown footnotes&lt;sup id=&quot;fnref1&quot;&gt;&lt;a href=&quot;#fn1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. And incase you were looking for more examples, here is another one&lt;sup id=&quot;fnref2&quot;&gt;&lt;a href=&quot;#fn2&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
 &lt;h2 id=&quot;other-interesting-stuff&quot;&gt;Other interesting stuff&lt;/h2&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;to insert a horizontal rule simple add &lt;code&gt;- - -&lt;/code&gt; into an empty line:&lt;/p&gt;
+
 &lt;p&gt;Hello&lt;/p&gt;
+
 &lt;hr/&gt;
+
 &lt;p&gt;Hello2&lt;/p&gt;
+
 &lt;p&gt;Result:
 
 Hello
 &lt;/p&gt;
+
 &lt;p&gt;Hello2&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Any ASCII punctuation character may escaped by precedeing them with a
 backslash to avoid them being interpreted:&lt;/p&gt;
-&lt;p&gt;!&amp;#8221;#$%&amp;#38;&amp;#8217;()*+,-.&amp;#47;:;&amp;#60;=&amp;#62;?@[]^_`{|}~\&lt;/p&gt;&lt;/li&gt;
+
+&lt;p&gt;!&amp;#8221;#$%&amp;#38;&amp;#8217;()*+,-.&amp;#47;:;&amp;#60;=&amp;#62;?@[]&lt;sup&gt;_`{|}~\&lt;/sup&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;To force a linebreak simple add two spaces to the end of the line:&lt;/p&gt;
+
 &lt;p&gt;No linebreak
 here.
 But here is&lt;br/&gt;
 one.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h2 id=&quot;embed-html&quot;&gt;embed HTML&lt;/h2&gt;
+
 &lt;p&gt;You can include arbitrary HTML code in your documents. The HTML will be
 passed through to the resulting document without modification. This is a good
 way to work around features that are missing in smu. If you don&amp;#8217;t want this
 behaviour, use the &lt;code&gt;-n&lt;/code&gt; flag when executing smu to stricly escape the HTML
 tags.&lt;/p&gt;
+
 &lt;div class=&quot;footnotes&quot;&gt;
 &lt;hr/&gt;
 &lt;ol&gt;
@@ -279,14 +372,21 @@ tags.&lt;/p&gt;
 	<entry>
 		<title>Running `barf` on MacOS</title>
 		<content type="html">&lt;h1 id=&quot;running-on-macos&quot;&gt;Running &lt;code&gt;barf&lt;/code&gt; on MacOS&lt;/h1&gt;
+
 &lt;p&gt;2023-01-18&lt;/p&gt;
+
 &lt;p&gt;The &lt;code&gt;barf&lt;/code&gt; project was built on Linux and was catered towards Linux users. The core of the project will remain focused on Linux&amp;#47;GNU tools, but that doesn&amp;#8217;t mean MacOS needs to be left out in the cold.&lt;/p&gt;
+
 &lt;h2 id=&quot;download-packages&quot;&gt;Download Packages&lt;/h2&gt;
+
 &lt;p&gt;This walkthrough assumes that you already have &lt;a href=&quot;https://brew.sh/&quot;&gt;homebrew&lt;/a&gt; installed on your machine.&lt;/p&gt;
+
 &lt;p&gt;You will need to install the GNU versions of both &lt;code&gt;date&lt;/code&gt; and &lt;code&gt;sed&lt;/code&gt; in order to avoid breaking things when &lt;code&gt;barf&lt;/code&gt; tries to build.&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;brew install coreutils
 brew install gnu-sed
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Now everything should work as intended!&lt;/p&gt;</content>
 		<link href="https://barf.btxx.org/macos"/>
 		<id>https://barf.btxx.org/macos</id>
@@ -296,16 +396,24 @@ brew install gnu-sed
 	<entry>
 		<title>Supporting Basic Dark Mode</title>
 		<content type="html">&lt;h1 id=&quot;supporting-basic-dark-mode&quot;&gt;Supporting Basic Dark Mode&lt;/h1&gt;
+
 &lt;p&gt;2023-03-07&lt;/p&gt;
+
 &lt;p&gt;The default &lt;code&gt;barf&lt;/code&gt; site generator now supports basic dark mode functionality. This has been achieved by including the standard &lt;code&gt;color-scheme&lt;/code&gt; meta tag in the core &lt;code&gt;header.html&lt;/code&gt; file:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;&amp;#60;meta name=&quot;color-scheme&quot; content=&quot;dark light&quot;&amp;#62;
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;This change also ships with some minor updates to the default &lt;code&gt;blockquote&lt;/code&gt; design. You can see an example below:&lt;/p&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;This is a really &lt;em&gt;cool&lt;/em&gt; blockquote&lt;/p&gt;
 &lt;/blockquote&gt;
+
 &lt;h2 id=&quot;minor-caveat&quot;&gt;Minor Caveat&lt;/h2&gt;
+
 &lt;p&gt;Unfortunately, Safari still has minor &lt;code&gt;ahref&lt;/code&gt; &amp;#47; link color issue when defaulting to browser dark mode. If this is a problem for your own build of &lt;code&gt;barf&lt;/code&gt;, take a look at a &lt;a href=&quot;https://bt.ht/safari-default-dark-mode/&quot;&gt;solution I wrote about here&lt;/a&gt;.&lt;/p&gt;
+
 &lt;p&gt;Personally, I can&amp;#8217;t be bothered to add that extra code to this project. The Safari team needs to get their shit together and fix such a simple bug. Plus, you shouldn&amp;#8217;t be using Safari anyway - it&amp;#8217;s proprietary garbage.&lt;/p&gt;</content>
 		<link href="https://barf.btxx.org/dark-mode"/>
 		<id>https://barf.btxx.org/dark-mode</id>
@@ -315,22 +423,31 @@ brew install gnu-sed
 	<entry>
 		<title>Cleaning Up barf's Structure</title>
 		<content type="html">&lt;h1 id=&quot;cleaning-up-barfs-structure&quot;&gt;Cleaning Up barf&amp;#8217;s Structure&lt;/h1&gt;
+
 &lt;p&gt;2023-10-09&lt;/p&gt;
+
 &lt;p&gt;Things probably look a little different around here. Both in terms of this demo site &lt;em&gt;and&lt;/em&gt; the core &lt;code&gt;barf&lt;/code&gt; files itself.&lt;/p&gt;
+
 &lt;p&gt;This project was always intended to be focused on Linux platforms. So, I&amp;#8217;ve removed the included &lt;code&gt;barf_macos&lt;/code&gt; and &lt;code&gt;barf_openbsd&lt;/code&gt; files to keep the generator more streamlined. But have no fear! Instructions for both Mac and OpenBSD can still be found on the main blog:&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;/macos&quot;&gt;Running &lt;code&gt;barf&lt;/code&gt; on MacOS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/openbsd&quot;&gt;Running &lt;code&gt;barf&lt;/code&gt; on OpenBSD&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;p&gt;As for the &amp;#8220;default&amp;#8221; look of &lt;code&gt;barf&lt;/code&gt;, I&amp;#8217;ve simplified things further. The total CSS styling now consists of only:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;*{box-sizing:border-box;}
 body{font-family:sans-serif;margin:0 auto;max-width:650px;padding:1rem;}
 img{max-width:100%;}
 pre{overflow:auto;}
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Users still have the ability to tweak things as much as they&amp;#8217;d like, but the standard look should be more than enough for anyone just focusing on writing. Dark mode has also been dropped but is easily added by adding the following inside the &lt;code&gt;head&lt;/code&gt; tags:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;&amp;#60;meta name=&quot;color-scheme&quot; content=&quot;dark light&quot;&amp;#62;
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Hopefully these changes reduce the overall scope of the project, which was a main point made on the README originally!&lt;/p&gt;</content>
 		<link href="https://barf.btxx.org/cleanup"/>
 		<id>https://barf.btxx.org/cleanup</id>

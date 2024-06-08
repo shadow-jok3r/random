@@ -55,12 +55,13 @@ https://barf.btxx.org/openbsd
 - coreutils
 - gcc
 - cmake
-- rsync
 - lowdown
 - gsed
 - entr (optional)
 
-    doas pkg_add coreutils gcc cmake rsync lowdown gsed
+Example:
+
+    doas pkg_add coreutils gcc cmake lowdown gsed
 
 macOS
 -----
@@ -73,6 +74,8 @@ https://barf.btxx.org/macos
 - rsync
 - lowdown
 - entr (optional)
+
+Example:
 
     brew install coreutils gnu-sed rsync lowdown
 

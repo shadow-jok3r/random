@@ -16,26 +16,38 @@
 
 <main>
 <h1 id="quality-of-life-improvements">Quality of Life Improvements</h1>
+
 <p>2024-06-06</p>
+
 <p>I haven&#8217;t circled back to <code>barf</code> in quite a bit of time, so I&#8217;m happy to announce a small update mainly focused on quality of life improvements! I&#8217;ll keep things brief and get right into the core changes:</p>
+
 <p><strong>Automatic detection of your operating system (supports Linux, macOS and OpenBSD currently)</strong></p>
+
 <ul>
 <li><code>barf</code> now checks your current OS and sets aliases accordingly</li>
 <li>this removes the need to hard-set your own aliases or run syslinks</li>
 </ul>
+
 <p><strong>Added a semantically valid RSS feed</strong></p>
+
 <ul>
 <li><code>barf</code> initially launched with Atom support only, now a separate RSS feed is generated at build time</li>
 </ul>
+
 <p><strong>Removed hardcoded feed links from <code>header.html</code></strong></p>
+
 <ul>
 <li>You now only need to set your main domain at the top of the core <code>barf</code> file.</li>
 </ul>
+
 <p><strong>Swapped out <code>smu</code> for <code>lowdown</code></strong></p>
+
 <ul>
 <li>The default Markdown parser is now set to <code>lowdown</code>. The original parser (<code>smu</code>) is great, but I wanted to make the project simpler by avoiding users to clone and build a separate package.</li>
 </ul>
+
 <p>That&#8217;s it really! I&#8217;ve also updated the original blog posts about setting up <code>barf</code> on macOS and OpenBSD to reflect these changes.</p>
+
 <p>Cheers!</p>
 <footer role="contentinfo">
     <hr>

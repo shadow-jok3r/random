@@ -8,6 +8,7 @@ os_name=$(uname -s)
 if [ "$os_name" = "OpenBSD" ]; then
     alias sed=gsed
     alias date=gdate
+    alias rsync=openrsync
 elif [ "$os_name" = "Darwin" ]; then
     alias sed=gsed
     alias date=gdate
