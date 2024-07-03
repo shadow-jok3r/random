@@ -16,24 +16,16 @@
 
 <main>
 <h1 id="supporting-basic-dark-mode">Supporting Basic Dark Mode</h1>
-
 <p>2023-03-07</p>
-
 <p>The default <code>barf</code> site generator now supports basic dark mode functionality. This has been achieved by including the standard <code>color-scheme</code> meta tag in the core <code>header.html</code> file:</p>
-
 <pre><code>&#60;meta name="color-scheme" content="dark light"&#62;
 </code></pre>
-
 <p>This change also ships with some minor updates to the default <code>blockquote</code> design. You can see an example below:</p>
-
 <blockquote>
 <p>This is a really <em>cool</em> blockquote</p>
 </blockquote>
-
 <h2 id="minor-caveat">Minor Caveat</h2>
-
 <p>Unfortunately, Safari still has minor <code>ahref</code> &#47; link color issue when defaulting to browser dark mode. If this is a problem for your own build of <code>barf</code>, take a look at a <a href="https://bt.ht/safari-default-dark-mode/">solution I wrote about here</a>.</p>
-
 <p>Personally, I can&#8217;t be bothered to add that extra code to this project. The Safari team needs to get their shit together and fix such a simple bug. Plus, you shouldn&#8217;t be using Safari anyway - it&#8217;s proprietary garbage.</p>
 <footer role="contentinfo">
     <hr>
@@ -46,7 +38,7 @@
     </ul>
     <small>
         Feeds: <a href="/atom.xml">Atom</a> | <a href="/rss.xml">RSS</a> <br>
-        Built with <a href="https://git.btxx.org/barf">barf</a>. <br>
-        The <a href="https://git.btxx.org/barf">code for this site</a> is MIT.
+        Built with <a href="https://barf.btxx.org">barf</a>. <br>
+        The <a href="https://git.sr.ht/~bt/barf">code for this site</a> is MIT.
     </small>
 </footer>

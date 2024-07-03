@@ -18,7 +18,7 @@ You can learn more by reading the [official README](https://git.btxx.org/barf/ab
 
 For Linux (Alpine example):
 
-    sudo apk add rsync lowdown
+    sudo apk add rsync lowdown coreutils
 
 For macOS:
 
