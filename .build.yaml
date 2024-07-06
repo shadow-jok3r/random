@@ -1,0 +1,21 @@
+image: alpine/latest
+oauth: pages.sr.ht/PAGES:RW
+packages:
+- rsync
+- coreutils
+- lowdown
+- go
+- hut
+environment:
+site: barf.btxx.org
+sources:
+- https://git.sr.ht/~bt/barf
+tasks:
+- build: |
+    cd barf
+    make build
+- package: |
+    cd barf/build
+    tar -cvz . > ../../site.tar.gz
+- upload: |
+    hut pages publish -d barf.btxx.org site.tar.gz

@@ -6,7 +6,7 @@ The entire build script is >170 lines of shell.
 
 It could almost be called "suckless", but probably isn't. It was created for those focused on writing, not tinkering.
 
-You can learn more by reading the [official README](https://git.btxx.org/barf/about).
+You can learn more by reading the [official README](https://git.sr.ht/~bt/barf).
 
 **barf** = blogs are really fun
 
