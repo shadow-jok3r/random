@@ -19,6 +19,8 @@ I haven't circled back to `barf` in quite a bit of time, so I'm happy to announc
 
 **Swapped out `smu` for `lowdown`**
 
+> IMPORTANT! This is no longer true. I have gone to back to using my own forked version of `smu`
+
 * The default Markdown parser is now set to `lowdown`. The original parser (`smu`) is great, but I wanted to make the project simpler by avoiding users to clone and build a separate package.
 
 That's it really! I've also updated the original blog posts about setting up `barf` on macOS and OpenBSD to reflect these changes.

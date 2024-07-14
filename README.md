@@ -38,13 +38,12 @@ linux
 -----
 
 - rsync
-- lowdown
+- coreutils
 - entr (optonal)
-- standard UNIX tools
 
 Example on Alpine:
 
-    sudo apk add rsync lowdown
+    sudo apk add rsync
 
 openbsd
 -------
@@ -55,13 +54,12 @@ https://barf.btxx.org/openbsd
 - coreutils
 - gcc
 - cmake
-- lowdown
 - gsed
 - entr (optional)
 
 Example:
 
-    doas pkg_add coreutils gcc cmake lowdown gsed
+    doas pkg_add coreutils gcc cmake gsed
 
 macOS
 -----
@@ -72,12 +70,11 @@ https://barf.btxx.org/macos
 - coreutils
 - gnu-sed
 - rsync
-- lowdown
 - entr (optional)
 
 Example:
 
-    brew install coreutils gnu-sed rsync lowdown
+    brew install coreutils gnu-sed rsync
 
 basic setup
 -----------
@@ -86,6 +83,13 @@ Clone this repo and navigate inside it. Edit the "header.html"
 and "footer.html" files with your own information, navigation, etc. 
 
 Be sure to edit the **domain** variable inside `barf` or else your feed won't validate!
+
+Next, clone and install the minimal markdown parser `smu`:
+
+    git clone https://git.sr.ht/~bt/smu
+    cd smu
+    make
+    make install
 
 Then build:
 

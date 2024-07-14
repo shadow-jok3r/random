@@ -18,19 +18,26 @@ You can learn more by reading the [official README](https://git.sr.ht/~bt/barf).
 
 For Linux (Alpine example):
 
-    sudo apk add rsync lowdown coreutils
+    sudo apk add rsync coreutils
 
 For macOS:
 
-    brew install rsync lowdown coreutils gnu-sed
+    brew install rsync coreutils gnu-sed
 
 For OpenBSD:
 
-    doas pkg_add lowdown coreutils gsed cmake gcc
+    doas pkg_add coreutils gsed cmake gcc
+
+**Clone `smu` for markdown parsing:**
+
+    git clone https://git.sr.ht/~bt/smu
+    cd smu
+    make
+    make install
 
 **Clone barf:** 
 
-    git clone https://git.btxx.org/barf
+    git clone https://git.sr.ht/~bt/barf
 
 1. Open project, change the `domain` variable at the top of the core barf file
 2. Run: `make build`
