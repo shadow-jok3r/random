@@ -3,7 +3,6 @@ oauth: pages.sr.ht/PAGES:RW
 packages:
 - rsync
 - coreutils
-- lowdown
 - go
 - hut
 environment:
@@ -11,6 +10,11 @@ site: barf.btxx.org
 sources:
 - https://git.sr.ht/~bt/barf
 tasks:
+- install-smu: |
+    git clone https://git.sr.ht/~bt/smu
+    cd smu
+    sudo make
+    sudo make install
 - build: |
     cd barf
     make build
