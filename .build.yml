@@ -15,6 +15,7 @@ tasks:
     sudo cmake . -DCMAKE_BUILD_TYPE=Release
     sudo make
     sudo make install
+    cd
 - deploy-blog: |
     cd barf
     rsync --rsh="ssh -o StrictHostKeyChecking=no -i ~/.ssh/07201d32-1451-4a8f-9bff-ce8b2232c67d" -rzP build/ bt@barf.btxx.org:/var/www/barf
