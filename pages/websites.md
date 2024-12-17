@@ -2,5 +2,4 @@
 
 Send an email to bt [at] btxx [dot] org if you would like me to add your barf-generated website to this list.
 
-- [jsfree.org](https://jsfree.org)
 - [barf.btxx.org](https://barf.btxx.org)

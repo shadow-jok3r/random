@@ -1,25 +1,16 @@
-image: alpine/latest
-oauth: pages.sr.ht/PAGES:RW
+image: alpine/edge
 packages:
 - rsync
 - coreutils
-- go
-- hut
-environment:
-site: barf.btxx.org
+- multimarkdown
 sources:
 - https://git.sr.ht/~bt/barf
+secrets:
+- 07201d32-1451-4a8f-9bff-ce8b2232c67d
 tasks:
-- install-smu: |
-    git clone https://git.sr.ht/~bt/smu
-    cd smu
-    sudo make
-    sudo make install
 - build: |
     cd barf
-    make build
-- package: |
-    cd barf/build
-    tar -cvz . > ../../site.tar.gz
-- upload: |
-    hut pages publish -d barf.btxx.org site.tar.gz
+    sudo make build
+- deploy-blog: |
+    cd barf
+    rsync --rsh="ssh -o StrictHostKeyChecking=no -i ~/.ssh/07201d32-1451-4a8f-9bff-ce8b2232c67d" -rzP build/ bt@barf.btxx.org:/var/www/barf

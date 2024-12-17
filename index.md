@@ -18,22 +18,15 @@ You can learn more by reading the [official README](https://git.sr.ht/~bt/barf).
 
 For Linux (Alpine example):
 
-    sudo apk add rsync coreutils
+    sudo apk add rsync coreutils multimarkdown
 
 For macOS:
 
-    brew install rsync coreutils gnu-sed
+    brew install rsync coreutils gnu-sed multimarkdown
 
 For OpenBSD:
 
     doas pkg_add coreutils gsed cmake gcc
-
-**Clone `smu` for markdown parsing:**
-
-    git clone https://git.sr.ht/~bt/smu
-    cd smu
-    make
-    make install
 
 **Clone barf:** 
 

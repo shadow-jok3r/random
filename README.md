@@ -39,6 +39,7 @@ linux
 
 - rsync
 - coreutils
+- multimarkdown
 - entr (optonal)
 
 Example on Alpine:
@@ -55,6 +56,7 @@ https://barf.btxx.org/openbsd
 - gcc
 - cmake
 - gsed
+- multimarkdown
 - entr (optional)
 
 Example:
@@ -70,6 +72,7 @@ https://barf.btxx.org/macos
 - coreutils
 - gnu-sed
 - rsync
+- multimarkdown
 - entr (optional)
 
 Example:
@@ -84,14 +87,7 @@ and "footer.html" files with your own information, navigation, etc.
 
 Be sure to edit the **domain** variable inside `barf` or else your feed won't validate!
 
-Next, clone and install the minimal markdown parser `smu`:
-
-    git clone https://git.sr.ht/~bt/smu
-    cd smu
-    make
-    make install
-
-Then build:
+Install the required dependencies, then build:
 
     make build
 
