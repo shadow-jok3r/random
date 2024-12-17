@@ -39,7 +39,7 @@ linux
 
 - rsync
 - coreutils
-- multimarkdown
+- cmake
 - entr (optonal)
 
 Example on Alpine:
@@ -72,7 +72,7 @@ https://barf.btxx.org/macos
 - coreutils
 - gnu-sed
 - rsync
-- multimarkdown
+- cmake
 - entr (optional)
 
 Example:
@@ -86,6 +86,16 @@ Clone this repo and navigate inside it. Edit the "header.html"
 and "footer.html" files with your own information, navigation, etc. 
 
 Be sure to edit the **domain** variable inside `barf` or else your feed won't validate!
+
+**Build MultiMarkdown**
+
+```
+git clone https://github.com/fletcher/MultiMarkdown-6.git
+cd MultiMarkdown-6
+sudo cmake . -DCMAKE_BUILD_TYPE=Release
+sudo make
+sudo make install
+```
 
 Install the required dependencies, then build:
 

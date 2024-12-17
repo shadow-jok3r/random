@@ -18,15 +18,25 @@ You can learn more by reading the [official README](https://git.sr.ht/~bt/barf).
 
 For Linux (Alpine example):
 
-    sudo apk add rsync coreutils multimarkdown
+    sudo apk add rsync coreutils cmake
 
 For macOS:
 
-    brew install rsync coreutils gnu-sed multimarkdown
+    brew install rsync coreutils gnu-sed cmake
 
 For OpenBSD:
 
     doas pkg_add coreutils gsed cmake gcc
+
+**Build MultiMarkdown**
+
+```
+git clone https://github.com/fletcher/MultiMarkdown-6.git
+cd MultiMarkdown-6
+sudo cmake . -DCMAKE_BUILD_TYPE=Release
+sudo make
+sudo make install
+```
 
 **Clone barf:** 
 
