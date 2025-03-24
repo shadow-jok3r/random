@@ -40,7 +40,7 @@ linux
 - rsync
 - coreutils
 - cmake
-- entr (optonal)
+- entr (optional)
 
 Example on Alpine:
 
