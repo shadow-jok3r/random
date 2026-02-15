@@ -1,13 +1,14 @@
 image: alpine/edge
+oauth: pages.sr.ht/PAGES:RW
 packages:
 - cmake
 - git
 - rsync
 - coreutils
-sources:
-- https://git.sr.ht/~bt/barf
-secrets:
-- 07201d32-1451-4a8f-9bff-ce8b2232c67d
+- hut
+environment:
+  repo: barf
+  site: barf.btxx.org
 tasks:
 - build-multimarkdown: |
     git clone https://github.com/fletcher/MultiMarkdown-6.git
@@ -16,7 +17,12 @@ tasks:
     sudo make
     sudo make install
     cd ..
-- deploy-blog: |
-    cd barf
-    sudo make build
-    rsync --rsh="ssh -o StrictHostKeyChecking=no -i ~/.ssh/07201d32-1451-4a8f-9bff-ce8b2232c67d" -rzP build/ bt@barf.btxx.org:/var/www/barf
+- build-barf: |
+    cd $repo
+    mkdir build
+    make build
+- package: |
+    cd $repo/build
+    tar -cvzh . > ../site.tar.gz
+- deploy: |
+    hut pages publish -d $site $repo/site.tar.gz
