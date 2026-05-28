@@ -73,11 +73,12 @@ https://barf.btxx.org/macos
 - gnu-sed
 - rsync
 - cmake
+- multimarkdown
 - entr (optional)
 
 Example:
 
-    brew install coreutils gnu-sed rsync
+    brew install coreutils gnu-sed rsync multimarkdown
 
 basic setup
 -----------

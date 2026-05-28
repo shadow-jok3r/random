@@ -22,13 +22,13 @@ For Linux (Alpine example):
 
 For macOS:
 
-    brew install rsync coreutils gnu-sed cmake
+    brew install rsync coreutils gnu-sed cmake multimarkdown
 
 For OpenBSD:
 
     doas pkg_add coreutils gsed cmake gcc
 
-**Build MultiMarkdown**
+**Build MultiMarkdown (Linux)**
 
 ```
 git clone https://github.com/fletcher/MultiMarkdown-6.git
